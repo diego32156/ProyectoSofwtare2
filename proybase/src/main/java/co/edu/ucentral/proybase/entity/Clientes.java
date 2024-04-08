@@ -20,12 +20,14 @@ import java.util.Set;
 
 public class Clientes implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_cliente")
     private long idCliente;
     private String nombre;
     private String apellido;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int cedula;
+    private String correoElectronico;
 
     @ManyToMany
     @JoinTable(

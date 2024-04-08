@@ -21,19 +21,11 @@ public class Sucursal implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_sucursal")
     private long idSucursal;
+
     private String direccion;
+
     private int telefono;
 
-     @ManyToOne
-     @JoinTable(
-             name = "sucursal_tipoCita",
-             joinColumns = @JoinColumn(name = "id_sucursal"),
-             inverseJoinColumns = @JoinColumn(name = "id_tipoCita")
-     )
-     private Set<TipoCita> sucursalTipoDeCita = new HashSet<>();
-
-
-
-
-
+   // @OneToMany(mappedBy = "sucursal")
+  //  private Set<TipoCita> sucursal_tipo_cita = new HashSet<>();
 }

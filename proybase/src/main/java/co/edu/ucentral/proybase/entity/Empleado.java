@@ -46,6 +46,6 @@ public class Empleado implements Serializable {
             joinColumns = @JoinColumn(name = "id_empleado"),
             inverseJoinColumns = @JoinColumn(name = "id_tipoCita")
     )
-    private Set<TipoCita> empleadotipoCita = new HashSet<>();
+    private Set<TipoCita> empleadoCita = new HashSet<>();
 
 }
