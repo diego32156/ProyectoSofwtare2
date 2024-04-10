@@ -28,6 +28,7 @@ public class Clientes implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cedula;
     private String correoElectronico;
+    private String telefono;
 
     @ManyToMany
     @JoinTable(
