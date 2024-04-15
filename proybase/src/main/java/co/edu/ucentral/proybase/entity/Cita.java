@@ -19,11 +19,19 @@ public class Cita  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idCita;
-    private Date fechaInico;
-    private Date fechaFin;
+    private Date fecha;
     private String numeroCita;
-    private String Descripcion;
+    private String descripcion;
+
+    @ManyToOne
+    @JoinColumn(name = "idCliente")
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "idSucursal")
+    private Sucursal sucursal;
 
 
-
+    public Cita(Cliente cliente, Date fecha, Sucursal sucursal) {
+    }
 }
