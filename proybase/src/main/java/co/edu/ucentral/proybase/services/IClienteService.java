@@ -1,15 +1,15 @@
 package co.edu.ucentral.proybase.services;
 
-import co.edu.ucentral.proybase.entity.Clientes;
+import co.edu.ucentral.proybase.entity.Cliente;
 
 import java.util.List;
 
 public interface IClienteService {
 
-    public List<Clientes> findAll();
-    public Clientes findById(long id);
+    public List<Cliente> findAll();
+    public Cliente findById(long id);
 
-    public Clientes save (Clientes cliente);
+    public Cliente save (Cliente cliente);
 
     public void  delete (long id);
 }

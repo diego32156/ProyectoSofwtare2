@@ -1,7 +1,7 @@
 package co.edu.ucentral.proybase.services;
 
 import co.edu.ucentral.proybase.dao.IClienteDao;
-import co.edu.ucentral.proybase.entity.Clientes;
+import co.edu.ucentral.proybase.entity.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,16 +15,16 @@ public class ClienteServiceImpl  implements IClienteService{
     private IClienteDao clienteDao;
 
     @Override
-    public List<Clientes> findAll() {
-        return (List<Clientes>) clienteDao.findAll();
+    public List<Cliente> findAll() {
+        return (List<Cliente>) clienteDao.findAll();
     }
 
     @Override
-    public Clientes findById(long id) {
+    public Cliente findById(long id) {
         return clienteDao.findById(id).orElse(null);
     }
 
-    public  Clientes save(Clientes cliente){
+    public Cliente save(Cliente cliente){
         return  clienteDao.save(cliente);
     }
 

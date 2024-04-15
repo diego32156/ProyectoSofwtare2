@@ -1,4 +1,7 @@
 package co.edu.ucentral.proybase.dao;
 
-public interface IEmpleadoDao {
+import co.edu.ucentral.proybase.entity.Empleado;
+import org.springframework.data.repository.CrudRepository;
+
+public interface IEmpleadoDao extends CrudRepository<Empleado,Long> {
 }

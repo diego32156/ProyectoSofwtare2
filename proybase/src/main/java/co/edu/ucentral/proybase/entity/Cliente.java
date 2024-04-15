@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,7 +17,7 @@ import java.util.Set;
 @AllArgsConstructor
 @Table(name = "clientes")
 
-public class Clientes implements Serializable {
+public class Cliente implements Serializable {
 
     @Column(name = "id_cliente")
     private long idCliente;
