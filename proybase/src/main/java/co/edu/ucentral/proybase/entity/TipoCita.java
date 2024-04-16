@@ -13,17 +13,17 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tipo-cita")
+@Table(name = "tipo_cita")
 public class TipoCita implements Serializable {
 
-     @Id
-     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     @Column(name = "id_tipoCita")
-     private long idTipoCita;
-     @Column(name = "tipo_de_servicio")
-     private String tipoDeServicio;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_tipoCita")
+    private long idTipoCita;
 
-   //  @OneToMany(mappedBy = "sucursal") // Corregido el nombre del atributo en Sucursal
-   //  private Set<Sucursal> cita_sucursal = new HashSet<>();
+    @Column(name = "tipo_de_servicio")
+    private String tipoDeServicio;
 
+    @OneToMany(mappedBy = "tipoCita")
+    private Set<Sucursal> citaSucursal = new HashSet<>();
 }

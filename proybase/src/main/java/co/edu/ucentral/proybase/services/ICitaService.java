@@ -10,8 +10,6 @@ import java.util.List;
 public interface ICitaService {
     public void cancelarCita(long id);
 
-
-
    public Cita crearCita(Cliente cliente, Date fecha, Sucursal sucursal);
 
     public List<Cita> obtenerTodasLasCitas();
