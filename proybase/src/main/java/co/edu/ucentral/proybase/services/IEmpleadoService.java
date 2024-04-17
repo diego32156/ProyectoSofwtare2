@@ -12,5 +12,7 @@ public interface IEmpleadoService {
 
     public List<Cita> verCitas(Empleado empleado);
 
-    public void realizarDescripcion(Cita cita, Empleado empleado);
+    public void realizarDescripcion(Cita cita, Empleado empleado, String descripcion);
+
+
 }

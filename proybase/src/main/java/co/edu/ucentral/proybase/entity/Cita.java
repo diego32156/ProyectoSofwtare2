@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "cita")
-public class Cita  implements Serializable {
+public class Cita extends TipoCita implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
