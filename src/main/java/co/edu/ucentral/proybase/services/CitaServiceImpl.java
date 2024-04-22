@@ -14,8 +14,6 @@ public class CitaServiceImpl implements ICitaService {
 
     private List<Cita> citas;
 
-
-
     public CitaServiceImpl(){
         citas = new ArrayList<>();
     }

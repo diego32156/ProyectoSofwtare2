@@ -23,7 +23,7 @@ public class Sucursal implements Serializable {
     private long idSucursal;
 
     private String direccion;
-
+    private String nombre;
     private int telefono;
 
    // @OneToMany(mappedBy = "sucursal")

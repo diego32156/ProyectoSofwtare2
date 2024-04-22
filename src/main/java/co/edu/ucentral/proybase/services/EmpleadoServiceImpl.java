@@ -22,7 +22,8 @@ public class EmpleadoServiceImpl implements IEmpleadoService{
     }
 
     @Override
-    public void realizarDescripcion(Cita cita, Empleado empleado) {
-        return;
+    public void realizarDescripcion(Cita cita, Empleado empleado, String descripcion) {
+
     }
+
 }
