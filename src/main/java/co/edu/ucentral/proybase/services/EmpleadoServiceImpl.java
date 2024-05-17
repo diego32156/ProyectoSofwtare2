@@ -11,19 +11,25 @@ import java.util.List;
 public class EmpleadoServiceImpl implements IEmpleadoService{
 
     private IEmpleadoDao empleadoDao;
-    @Override
-    public void acpetarCita(Cita cita, Empleado empleado) {
-        return ;
-    }
+
 
     @Override
-    public List<Cita> verCitas(Empleado empleado) {
+    public List<Empleado> findAll() {
         return null;
     }
 
     @Override
-    public void realizarDescripcion(Cita cita, Empleado empleado, String descripcion) {
-
+    public Empleado findById(Long id) {
+        return null;
     }
 
+    @Override
+    public Empleado save(Empleado empleado) {
+        return null;
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
 }

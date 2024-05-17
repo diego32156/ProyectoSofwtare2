@@ -1,18 +1,21 @@
 package co.edu.ucentral.proybase.services;
 
-import co.edu.ucentral.proybase.entity.Cita;
+
+
 import co.edu.ucentral.proybase.entity.Empleado;
+
 
 import java.util.List;
 
 public interface IEmpleadoService {
 
+    public List <Empleado> findAll();
 
-    public void acpetarCita(Cita cita, Empleado empleado);
+    public Empleado findById(Long id);
 
-    public List<Cita> verCitas(Empleado empleado);
+    public Empleado save (Empleado empleado);
 
-    public void realizarDescripcion(Cita cita, Empleado empleado, String descripcion);
+    public void delete (Long id);
 
 
 }

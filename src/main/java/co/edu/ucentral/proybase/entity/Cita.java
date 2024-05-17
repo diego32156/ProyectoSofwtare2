@@ -9,12 +9,14 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Date;
 
+
+
 @Data
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "cita")
-public class Cita extends TipoCita implements Serializable {
+public class Cita  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,6 +34,5 @@ public class Cita extends TipoCita implements Serializable {
     private Sucursal sucursal;
 
 
-    public Cita(Cliente cliente, Date fecha, Sucursal sucursal) {
-    }
+
 }

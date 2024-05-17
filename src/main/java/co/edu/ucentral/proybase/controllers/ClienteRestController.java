@@ -17,17 +17,19 @@ import java.util.stream.Collectors;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
-@RequestMapping("/api")
+@RequestMapping( value = "/api")
 public  class ClienteRestController  {
+
 
     @Autowired
     private IClienteService clienteService;
-    @GetMapping("/clientes")
-    public List<Cliente> index() {
+
+    @GetMapping(value = "/cliente")
+    public List<Cliente>  index(){
         return clienteService.findAll();
     }
 
-    @GetMapping("/clientes/{id}")
+    @GetMapping(value ="/cliente/{id}")
     public ResponseEntity<?> show(@PathVariable Long id) {
         Cliente cliente = null;
         Map <String, Object> response = new HashMap<>();
@@ -42,7 +44,7 @@ public  class ClienteRestController  {
     }
 
 
-    @PostMapping("/clientes")
+    @PostMapping(value ="/cliente")
     public ResponseEntity<?> create(@Valid @RequestBody Cliente cliente, BindingResult result) {
         Cliente clienteNew = null;
         Map<String, Object> response = new HashMap<>();
@@ -68,7 +70,7 @@ public  class ClienteRestController  {
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
 
-    @PutMapping("/clientes/{id}")
+    @PutMapping(value ="/cliente/{id}")
     public ResponseEntity<?> update(@RequestBody Cliente cliente, @PathVariable Long id){
         Cliente clienteActual = clienteService.findById(id);
         Cliente clienteUpdate = null;
@@ -100,7 +102,7 @@ public  class ClienteRestController  {
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/clientes/{id}")
+    @DeleteMapping(value ="/cliente /{id}")
     public  ResponseEntity<?> delete (@PathVariable Long id) {
         Map<String, Object> response = new HashMap<>();
 

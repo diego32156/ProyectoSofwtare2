@@ -1,8 +1,10 @@
 package co.edu.ucentral.proybase.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Data
 @NoArgsConstructor

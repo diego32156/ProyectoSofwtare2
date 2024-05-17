@@ -15,8 +15,7 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "clientes")
-
+@Table(name = "cliente")
 public class Cliente implements Serializable {
 
     @Column(name = "id_cliente")
@@ -26,8 +25,10 @@ public class Cliente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cedula;
+    @Column(name = "correo_electronico")
     private String correoElectronico;
     private String telefono;
+
 
     @ManyToMany
     @JoinTable(

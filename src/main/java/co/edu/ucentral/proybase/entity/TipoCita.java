@@ -24,6 +24,6 @@ public class TipoCita implements Serializable {
     @Column(name = "tipo_de_servicio")
     private String tipoDeServicio;
 
-    @OneToMany(mappedBy = "tipoCita")
-    private Set<Sucursal> citaSucursal = new HashSet<>();
+    //@OneToMany(mappedBy = "tipoCita")
+    // Set<Sucursal> citaSucursal = new HashSet<>();
 }

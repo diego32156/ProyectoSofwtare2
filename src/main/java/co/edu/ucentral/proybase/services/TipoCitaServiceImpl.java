@@ -12,24 +12,25 @@ public class TipoCitaServiceImpl implements ITipoCitaService {
 
     private ITipoCitaDao tipoCitaDao;
 
-    private List<TipoCita> tiposCita;
 
-    public TipoCitaServiceImpl(ITipoCitaDao tipoCitaDao){
-        this.tipoCitaDao = tipoCitaDao;
-        tiposCita = new ArrayList<>();
-    }
     @Override
-    public List<TipoCita> obtenerTiposCita() {
-        return tiposCita;
+    public List<TipoCita> findAll() {
+        return (List<TipoCita>) tipoCitaDao.findAll();
     }
 
     @Override
-    public void agregarTipoCita(TipoCita tipoCita) {
-        tipoCitaDao.save(tipoCita);
+    public TipoCita findById(Long id) {
+        return  tipoCitaDao.findById(id).orElse(null);
+    }
+
+
+    @Override
+    public TipoCita save(TipoCita tipoCita) {
+        return tipoCitaDao.save(tipoCita);
     }
 
     @Override
-    public void eliminarTipoCita(TipoCita tipoCita) {
-        tipoCitaDao.delete(tipoCita);
+    public void delete(long id) {
+        tipoCitaDao.deleteById(id);
     }
 }
