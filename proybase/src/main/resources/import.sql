@@ -1,1 +1,0 @@
-INSERT INTO clientes (nombre, apellido,  telefono, correoElectronico) VALUES ('Andres','Guzman',3216548701, 'andresguzman@yopmail.com');
