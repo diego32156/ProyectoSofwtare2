@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -36,6 +38,6 @@ public class Cliente implements Serializable {
             joinColumns = @JoinColumn(name = "id_cliente"),
             inverseJoinColumns = @JoinColumn(name = "id_cita")
     )
-    private Set<Cita> citas = new HashSet<>();
+    private List<Cita> citas = new ArrayList<>();
 
 }

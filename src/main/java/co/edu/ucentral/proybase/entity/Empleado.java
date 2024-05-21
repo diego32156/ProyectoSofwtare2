@@ -8,10 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 
 @Data
@@ -30,7 +27,9 @@ public class Empleado implements Serializable {
     @Column(name = "cedula_empleado")
     private int cedulaEmpleado;
     @Column(name = "estado_ocupacion")
-    private boolean estadoOcupacion;
+    private String estadoOcupacion;
+    @Column(name = "correo_electronico")
+    private String correoElectronico;
 
     @OneToMany
     @JoinTable(
@@ -46,6 +45,6 @@ public class Empleado implements Serializable {
             joinColumns = @JoinColumn(name = "id_empleado"),
             inverseJoinColumns = @JoinColumn(name = "id_tipoCita")
     )
-    private Set<TipoCita> empleadoCita = new HashSet<>();
+    private List<TipoCita> empleadoCita = new ArrayList<>();
 
 }
