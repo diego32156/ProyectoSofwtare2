@@ -15,21 +15,21 @@ public class EmpleadoServiceImpl implements IEmpleadoService{
 
     @Override
     public List<Empleado> findAll() {
-        return null;
+        return (List<Empleado>) empleadoDao.findAll();
     }
 
     @Override
     public Empleado findById(Long id) {
-        return null;
+        return empleadoDao.findById(id).orElse(null);
     }
 
     @Override
     public Empleado save(Empleado empleado) {
-        return null;
+        return empleadoDao.save(empleado);
     }
 
     @Override
     public void delete(Long id) {
-
+        empleadoDao.deleteById(id);
     }
 }

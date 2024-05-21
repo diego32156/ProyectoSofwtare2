@@ -33,6 +33,8 @@ public class Cita  implements Serializable {
     @JoinColumn(name = "idSucursal")
     private Sucursal sucursal;
 
-
+    @OneToOne
+    @JoinColumn(name = "id_empleado")
+    private Empleado empleado;
 
 }
