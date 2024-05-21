@@ -105,7 +105,7 @@ public class SucursalRestController {
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value ="/cliente /{id}")
+    @DeleteMapping(value ="/sucursal /{id}")
     public  ResponseEntity<?> delete (@PathVariable Long id){
         Map<String, Object> response = new HashMap<>();
 
