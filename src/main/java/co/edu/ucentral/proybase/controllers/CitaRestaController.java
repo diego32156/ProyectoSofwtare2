@@ -45,7 +45,7 @@ public class CitaRestaController  {
         return new ResponseEntity<Cita>(cita, HttpStatus.OK);
     }
 
-    @PostMapping(value ="/cliente")
+    @PostMapping(value ="/cita")
     public ResponseEntity<?> create(@Valid @RequestBody Cita cita, BindingResult result){
         Cita citaNew = null;
         Map<String, Object> response = new HashMap<>();

@@ -30,9 +30,9 @@ public class Sucursal implements Serializable {
 
     @OneToMany
     @JoinTable(
-            name = "sucursal_ipoCita",
+            name = "sucursal_tipoCita",
             joinColumns = @JoinColumn(name = "id_surcusal"),
-            inverseJoinColumns = @JoinColumn(name = "id_tipoCitaa")
+            inverseJoinColumns = @JoinColumn(name = "id_tipoCita")
     )
     private List<TipoCita> tipoCitas = new ArrayList<>();
 }
