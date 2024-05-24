@@ -6,7 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -26,6 +28,11 @@ public class Sucursal implements Serializable {
     private String nombre;
     private int telefono;
 
-   // @OneToMany(mappedBy = "sucursal")
-  //  private Set<TipoCita> sucursal_tipo_cita = new HashSet<>();
+    @OneToMany
+    @JoinTable(
+            name = "sucursal_tipoCita",
+            joinColumns = @JoinColumn(name = "id_surcusal"),
+            inverseJoinColumns = @JoinColumn(name = "id_tipoCita")
+    )
+    private List<TipoCita> tipoCitas = new ArrayList<>();
 }
