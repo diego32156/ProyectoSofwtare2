@@ -88,7 +88,7 @@ public class EmpleadoRestController {
             empleadoActual.setCedulaEmpleado(empleado.getCedulaEmpleado());
             empleadoActual.setCorreoElectronico(empleado.getCorreoElectronico());
             empleadoActual.setEstadoOcupacion(empleado.getEstadoOcupacion());
-            empleadoActual.setCitasEmpelado(empleado.getCitasEmpelado());
+            empleadoActual.setEmpleadoCita(empleado.getEmpleadoCita());
             empleadoActual.setIdEmpleado(empleado.getIdEmpleado());
 
             empleadoUpdate = empleadoService.save(empleadoActual);

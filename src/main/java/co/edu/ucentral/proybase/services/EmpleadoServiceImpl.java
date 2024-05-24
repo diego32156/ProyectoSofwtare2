@@ -3,6 +3,7 @@ package co.edu.ucentral.proybase.services;
 import co.edu.ucentral.proybase.dao.IEmpleadoDao;
 import co.edu.ucentral.proybase.entity.Cita;
 import co.edu.ucentral.proybase.entity.Empleado;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 @Service
 public class EmpleadoServiceImpl implements IEmpleadoService{
 
+    @Autowired
     private IEmpleadoDao empleadoDao;
 
 

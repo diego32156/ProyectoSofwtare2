@@ -31,13 +31,6 @@ public class Empleado implements Serializable {
     @Column(name = "correo_electronico")
     private String correoElectronico;
 
-    @OneToMany
-    @JoinTable(
-            name = "empleado_cita",
-            joinColumns = @JoinColumn(name = "id_empleado"),
-            inverseJoinColumns = @JoinColumn(name = "id_cita")
-    )
-    private Set<Cita> citasEmpelado = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
