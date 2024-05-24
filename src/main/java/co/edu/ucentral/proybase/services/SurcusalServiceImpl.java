@@ -3,6 +3,7 @@ package co.edu.ucentral.proybase.services;
 
 import co.edu.ucentral.proybase.dao.ISucursalDao;
 import co.edu.ucentral.proybase.entity.Sucursal;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.Map;
 @Service
 public class SurcusalServiceImpl  implements ISucursalService {
 
+    @Autowired
     private ISucursalDao sucursalDao;
 
 
