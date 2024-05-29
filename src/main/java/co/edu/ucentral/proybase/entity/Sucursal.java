@@ -31,8 +31,8 @@ public class Sucursal implements Serializable {
     @OneToMany
     @JoinTable(
             name = "sucursal_tipoCita",
-            joinColumns = @JoinColumn(name = "id_surcusal"),
-            inverseJoinColumns = @JoinColumn(name = "id_tipoCita")
+            joinColumns = @JoinColumn(name = "id_sucursal"),
+            inverseJoinColumns = @JoinColumn(name = "id_tipo_cita ")
     )
     private List<TipoCita> tipoCitas = new ArrayList<>();
 }

@@ -25,9 +25,6 @@ public class Cita  implements Serializable {
     private String numeroCita;
     private String descripcion;
 
-    @ManyToOne
-    @JoinColumn(name = "idCliente")
-    private Cliente cliente;
 
     @ManyToOne
     @JoinColumn(name = "idSucursal")
@@ -37,4 +34,7 @@ public class Cita  implements Serializable {
     @JoinColumn(name = "id_empleado")
     private Empleado empleado;
 
+    @OneToOne
+    @JoinColumn(name = "tipo_de_servicio")
+    private TipoCita tipoCita;
 }

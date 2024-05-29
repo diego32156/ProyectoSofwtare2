@@ -1,6 +1,7 @@
 package co.edu.ucentral.proybase.controllers;
 
 import co.edu.ucentral.proybase.entity.Cita;
+import co.edu.ucentral.proybase.entity.TipoCita;
 import co.edu.ucentral.proybase.services.ICitaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,10 +91,10 @@ public class CitaRestaController  {
             citaActual.setNumeroCita(cita.getNumeroCita());
             citaActual.setDescripcion(cita.getDescripcion());
             citaActual.setFecha(cita.getFecha());
-            citaActual.setCliente(cita.getCliente());
             citaActual.setEmpleado(cita.getEmpleado());
             citaActual.setSucursal(cita.getSucursal());
             citaActual.setIdCita(cita.getIdCita());
+            citaActual.setTipoCita(cita.getTipoCita());
 
             citaUpdate = citaService.save(citaActual);
         }catch (DataAccessException ex){

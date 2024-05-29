@@ -32,7 +32,7 @@ public class Cliente implements Serializable {
     private String telefono;
 
 
-    @ManyToMany
+    @OneToMany
     @JoinTable(
             name = "cita_clientes",
             joinColumns = @JoinColumn(name = "id_cliente"),
