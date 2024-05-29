@@ -89,7 +89,7 @@ public  class ClienteRestController  {
             clienteActual.setCorreoElectronico(cliente.getCorreoElectronico());
             clienteActual.setCedula(cliente.getCedula());
             clienteActual.setTelefono(cliente.getTelefono());
-            clienteActual.setIdCliente(cliente.getIdCliente());
+
 
             clienteUpdate = clienteService.save(clienteActual);
         } catch (DataAccessException e) {

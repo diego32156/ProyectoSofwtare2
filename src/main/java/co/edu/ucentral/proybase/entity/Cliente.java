@@ -2,6 +2,7 @@ package co.edu.ucentral.proybase.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.util.Set;
 
 
 @Data
+@Builder
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,7 +23,7 @@ import java.util.Set;
 public class Cliente implements Serializable {
 
     @Column(name = "id_cliente")
-    private long idCliente;
+    private static long idCliente;
     private String nombre;
     private String apellido;
     @Id
@@ -39,5 +41,6 @@ public class Cliente implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "id_cita")
     )
     private List<Cita> citas = new ArrayList<>();
+
 
 }

@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+
+  java_app:
+    container_name: java_app
+    image: pee-java_app:1.0.0
+    build: .
+    ports:
+      - 8863:8863
+    environment:
+      - DATABASE_URL=jdbc:postgresql://dpg-cpb8ncvsc6pc73a4dlog-a.ohio-postgres.render.com/citasbancarias
+      - DATABASE_USERNAME=userdata
+      - DATABASE_PASSWORD=IOquytljLm9d7yLn5u7NY6YcHP2yoVWv
+    depends_on:
+      - java_db
+  java_db:
+    container_name: java_db
+    image: postgres:16
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
