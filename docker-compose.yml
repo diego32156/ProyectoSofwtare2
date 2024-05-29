@@ -9,9 +9,9 @@ services:
     ports:
       - 8863:8863
     environment:
-      - DATABASE_URL=jdbc:postgresql://localhost:5432/citasbancarias
+      - DATABASE_URL=jdbc:postgresql://dpg-cpb8ncvsc6pc73a4dlog-a.ohio-postgres.render.com/citasbancarias
       - DATABASE_USERNAME=userdata
-      - DATABASE_PASSWORD=123456
+      - DATABASE_PASSWORD=IOquytljLm9d7yLn5u7NY6YcHP2yoVWv
     depends_on:
       - java_db
   java_db:
